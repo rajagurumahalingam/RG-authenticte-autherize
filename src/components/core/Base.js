@@ -26,7 +26,7 @@ const Base = (props) => {
                 <ul className="nav navbar-nav">
                   <li><Link to="/">Home</Link></li>
                   <li><Link to="/login">Login</Link></li>
-                  <li><Link to="/register">Register</Link></li>
+                  <li><Link to="/register">Register!</Link></li>
                   { props.loggedIn && <li onClick={logout}>Logout</li>}
                 </ul> 
               </div>
