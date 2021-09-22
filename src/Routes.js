@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom";
 import Home from "./components/core/Home";
 import Register from "./components/Register"
 import Login from "./components/Login";
@@ -10,14 +10,14 @@ const history = createBrowserHistory({forceRefresh:true});
 
 const Routes = () => {
   return (
-    <BrowserRouter forceRefresh={true} history={history}>
+    <Router forceRefresh={true} history={history}>
         <Switch>
           <PrivateRoute exact path="/" component={Home} />
-          <Route path="/login" exact component={Login} />
-          <Route path="/register" exact component={Register} />
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
           <Redirect from="*" to="/" />
         </Switch>
-    </BrowserRouter>
+    </Router>
   );
 };
 

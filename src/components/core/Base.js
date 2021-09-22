@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { configureFakeBackend } from '../../_helpers/fakebackend';
 import { userActions } from '../../actions/user.action';
