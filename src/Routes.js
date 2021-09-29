@@ -4,17 +4,17 @@ import Home from "./components/core/Home";
 import Register from "./components/Register"
 import Login from "./components/Login";
 import { PrivateRoute } from './components/privateroute';
-import { createBrowserHistory } from 'history';
+import { createBrowserHistory, withRouter } from 'history';
 
-const history = createBrowserHistory({forceRefresh:true});
+const history = createBrowserHistory();
 
 const Routes = () => {
   return (
-    <Router forceRefresh={true} history={history}>
+    <Router history={history}>
         <Switch>
           <PrivateRoute exact path="/" component={Home} />
-          <Route path="/login" component={Login} />
-          <Route path="/register" component={Register} />
+          <Route path="/login" exact component={Login} />
+          <Route path="/register" exact component={Register} />
           <Redirect from="*" to="/" />
         </Switch>
     </Router>

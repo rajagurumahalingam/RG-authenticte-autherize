@@ -29,6 +29,7 @@ class Login extends Component{
 
         if (username && password) {
             userService.login(username, password);
+            console.log("logginnnn!!");
         }
     }
 
